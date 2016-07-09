@@ -1,0 +1,35 @@
+{
+  "client": {
+    "connectionString": "localhost:2181",
+    "clientId": "kafka-node-client"
+  },
+  "producer": {
+    // Configuration for when to consider a message as acknowledged, default 1
+    "requireAcks": 1,
+    // The amount of time in milliseconds to wait for all acks before considered, default 100ms
+    "ackTimeoutMs": 100,
+    // Partitioner type (default = 0, random = 1, cyclic = 2, keyed = 3), default 0
+    "partitionerType": 3
+  },
+  "topic": {
+    "name": "bee.msgs",
+    "attributes": 1
+  },
+  "consumer": {
+    "groupId": "kafka-node-group",
+    //consumer group id, default `kafka-node-group`
+    // Auto commit config
+    "autoCommit": true,
+    "autoCommitIntervalMs": 5000,
+    // The max wait time is the maximum amount of time in milliseconds to block waiting if insufficient data is available at the time the request is issued, default 100ms
+    "fetchMaxWaitMs": 100,
+    // This is the minimum number of bytes of messages that must be available to give a response, default 1 byte
+    "fetchMinBytes": 1,
+    // The maximum bytes to include in the message set for this partition. This helps bound the size of the response. 1024*1024
+    "fetchMaxBytes": 1048576,
+    // If set true, consumer will fetch message from the given offset in the payloads
+    "fromOffset": false,
+    // If set to 'buffer', values will be returned as raw buffer objects.
+    "encoding": "utf8"
+  }
+}
