@@ -3,4 +3,4 @@ npm install config
 
 Start app by:
 $ export NODE_ENV=default
-$ node my-app.js
+$ node producer-app.js

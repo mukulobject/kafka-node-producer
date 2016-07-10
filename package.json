@@ -1,10 +1,17 @@
 {
-    "name": "kafka-node-producer",
-    "version": "0.0.1",
-    "description": "A simple node based kafka producer.",
-    "author": "Mukul",
-    "main": "kafka-producer",
-    "engines": {
-        "node": "6.2.2"
-    }
+  "name": "kafka-node-producer",
+  "version": "0.0.1",
+  "description": "A simple node based kafka producer.",
+  "author": "Mukul",
+  "main": "kafka-producer",
+  "engines": {
+    "node": "6.2.2"
+  },
+  "dependencies": {
+    "kafka-node": "latest",
+    "config": "latest"
+  },
+  "scripts": {
+    "start": "node producer-app.js"
+  }
 }

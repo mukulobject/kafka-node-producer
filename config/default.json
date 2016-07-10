@@ -1,6 +1,6 @@
 {
   "client": {
-    "connectionString": "localhost:2181",
+    "connectionString": "192.168.1.129:2181",
     "clientId": "kafka-node-client"
   },
   "producer": {
