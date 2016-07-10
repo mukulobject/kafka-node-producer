@@ -30,7 +30,7 @@ com.rb.kafka.Producer = (function () {
     })
 
     var payloads = [];
-    var count = 0;
+    var count = 1;
 
     function send(beeMessage) {
         var ProduceRequest = produceRequest(beeMessage)
@@ -48,7 +48,7 @@ com.rb.kafka.Producer = (function () {
                     process.exit()
                 }
                 else {
-                    console.log(++count + ' messages sent to broker. ' + JSON.stringify(data));
+                    console.log('Message-' + count++ + ' sent to broker. ' + JSON.stringify(data));
                     payloads.splice(0, payloads.length) // empty payload
                 }
             });
